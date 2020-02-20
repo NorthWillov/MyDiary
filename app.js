@@ -13,7 +13,9 @@ var noteRoutes      = require("./routes/notes"),
     userRoutes      = require("./routes/user"),
     indexRoutes     = require("./routes/index");
 
-mongoose.connect("mongodb://localhost/MyDiary");
+// mongoose.connect("mongodb://localhost/MyDiary");
+mongoose.connect("mongodb+srv://northwillov:Ya150699@cluster0-daqdu.mongodb.net/test?retryWrites=true&w=majority");
+
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
