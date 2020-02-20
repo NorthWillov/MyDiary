@@ -1,0 +1,14 @@
+<%- include("partials/header") %>	
+
+    <div id="landing-header">
+        <h1>Welcome to MyDiary</h1>
+        <p>Your private free online diary</p>
+        <% if (currentUser){ %>
+            <a href="/<%= currentUser._id %>/notes" class="btn btn-lg btn-success">View My Notes</a>
+        <% } %>
+        <% if (!currentUser){ %>
+            <a href="/register" class="start_btn btn btn-lg btn-success">Start To Use Free Online Diary</a>
+        <% } %>
+    </div>
+
+<%- include("partials/footer") %>
