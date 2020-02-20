@@ -48,7 +48,7 @@ app.use("/:user_id", userRoutes);
 app.use("/:user_id/notes", noteRoutes);
 
 
-app.listen(3000, function(){
+app.listen(process.env.PORT, process.env.IP, function(){
     console.log("Starting Server...");
 });
 
