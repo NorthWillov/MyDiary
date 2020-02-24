@@ -6,7 +6,7 @@ var express 	        = require("express"),
 
 // INDEX ROUTE    
 router.get("/", middleware.isLoggedIn, (req, res) => {
-    Note.find({}, (err, allNote) => {
+    Note.find({"author.username": req.user.username}, (err, allNote) => {
         if (err) {
           console.log(err);
         } else {

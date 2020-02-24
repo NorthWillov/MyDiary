@@ -11,7 +11,6 @@
     <h2>Your notes:</h2>
     <div class="row text-center" style="display: flex; flex-wrap: wrap;">
         <% notes.forEach((note) => { %>
-            <% if (note.author.id.equals(currentUser._id)){ %>
             <div class="col-md-3 col-sm-6">
                 <div class="thumbnail">
                     <h1><%= note.title.substring(0, 20) %></h1>
@@ -20,7 +19,6 @@
                     <a class="readmore btn btn-sm" href="/<%= currentUser._id %>/notes/<%=note._id%>"> Read</a>
                 </div>
             </div> 
-        <% } %>
         <% }); %>
     </div>
 </div>
