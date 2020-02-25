@@ -21,16 +21,21 @@ router.post("/register", (req, res) => {
         username: req.body.username,
         email: req.body.email
     });
-    User.register(newUser, req.body.password, (err, user) => {
-        if (err) {
-            req.flash("error", err.message);
-            return res.redirect("/register");
-        } else {
-            passport.authenticate("local")(req, res, function(){
-                res.redirect("/" + req.user._id + "/notes");
-            });
-        }
-    });
+    if (req.body.password.length >= 8) { 
+        User.register(newUser, req.body.password, (err, user) => {
+            if (err) {
+                req.flash("error", err.message);
+                return res.redirect("/register");
+            } else {
+                passport.authenticate("local")(req, res, function(){
+                    res.redirect("/" + req.user._id + "/notes");
+                });
+            }
+        });
+    } else {
+        req.flash("error", "Password must contain at least 8 characters");
+        res.redirect("back");
+    }
 });
 
 //SHOW LOGIN FORM
