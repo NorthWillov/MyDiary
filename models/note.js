@@ -1,6 +1,6 @@
-var mongoose = require("mongoose");
+let mongoose = require("mongoose");
 
-var noteSchema = new mongoose.Schema({
+let noteSchema = new mongoose.Schema({
     title: String,
     content: String,
     author: {

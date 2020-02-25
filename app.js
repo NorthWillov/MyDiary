@@ -1,4 +1,4 @@
-var express             = require("express"),
+let express             = require("express"),
     expressSanitizer 	= require("express-sanitizer"),
     app                 = express(),
     bodyParser          = require("body-parser"),
@@ -9,7 +9,7 @@ var express             = require("express"),
     methodOverride      = require("method-override"),
     User                = require("./models/user");
 
-var noteRoutes      = require("./routes/notes"),
+let noteRoutes      = require("./routes/notes"),
     userRoutes      = require("./routes/user"),
     indexRoutes     = require("./routes/index");
 

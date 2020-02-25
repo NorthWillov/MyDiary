@@ -1,9 +1,9 @@
-var express     = require("express"),
+let express     = require("express"),
     router      = express.Router(),
     passport    = require("passport"),
     User        = require("../models/user");
 
-router.get("/", function(req, res){
+router.get("/", (req, res) => {
     res.render("landing");
 });
 
@@ -17,7 +17,7 @@ router.get("/register", (req, res) => {
 
 //HANDLE SIGN UP LOGIC
 router.post("/register", (req, res) => {
-    var newUser = new User({
+    let newUser = new User({
         username: req.body.username,
         email: req.body.email
     });

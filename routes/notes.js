@@ -1,4 +1,4 @@
-var express 	        = require("express"),
+let express 	        = require("express"),
     router 		        = express.Router(),
     Note                = require("../models/note"),
     User                = require("../models/user"),
@@ -29,14 +29,14 @@ router.get("/new", middleware.isLoggedIn, (req, res) => {
 router.post("/", middleware.isLoggedIn, (req, res) => {
     req.body.title = req.sanitize(req.body.title);
     req.body.content = req.sanitize(req.body.content);
-    var title = req.body.title;
-    var content = req.body.content;
-    var author = {
+    let title = req.body.title;
+    let content = req.body.content;
+    let author = {
         id: req.user._id,
         username: req.user.username
     };
-    var created = req.body.created;
-    var newNote = {title: title, content: content, author: author, created: created};
+    let created = req.body.created;
+    let newNote = {title: title, content: content, author: author, created: created};
     Note.create(newNote, (err, newNote) => {
         if (err) {
             console.log(err);

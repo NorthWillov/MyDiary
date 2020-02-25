@@ -1,7 +1,4 @@
-var Note = require("../models/note");
-var User = require("../models/user");
-
-var middlewareObj = {};
+let middlewareObj = {};
 
 middlewareObj.isLoggedIn = (req, res, next) => {
     if (req.isAuthenticated()){
