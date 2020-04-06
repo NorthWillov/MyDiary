@@ -93,6 +93,14 @@ textarea {
     float: right;
     color: #fff;
 }
+.author {
+    font-size: 10px;
+    color:black; 
+    position: absolute; 
+    display: block; 
+    bottom: 0%; 
+    right: 45%;
+}
 
 
 
