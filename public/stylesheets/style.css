@@ -73,14 +73,11 @@ textarea {
     color: #fff;
     text-decoration: underline;
 }
-.show_block {
-    text-align: center;
-    margin-bottom: 50px;
-    background-color: rgba(255,255,255,0.1);
-    border: 1px solid #fff;
-}
-.show_block p {
-    margin-bottom: 50px;
+.show_p {
+    color: #000;
+    padding: 10px 10px 40px 10px;
+    background-color: rgba(255,255,255,1);
+    border: 1px solid #000;
 }
 .show_btns {
     display: flex;
@@ -106,8 +103,12 @@ textarea {
     right: 45%;
 }
 .date {
-    float: left;
+    text-align: center;
 }
+.show_h1 {
+    text-align: center;
+}
+
 
 
 

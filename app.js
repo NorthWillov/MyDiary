@@ -51,10 +51,3 @@ app.use("/:user_id/notes", noteRoutes);
 app.listen(process.env.PORT, process.env.IP, function(){
     console.log("Starting Server...");
 });
-
-
-
-
-
-
-
