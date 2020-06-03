@@ -8,29 +8,13 @@
             <a class="goback" href="/<%= currentUser._id %>/notes">Go back</a>
         </div>
         <div class="show_btns">
-            <span class="show_btns_item"><%= note.created.toDateString() %></span>
             <a class="show_btns_item btn btn-warning" href="/<%= currentUser._id %>/notes/<%= note._id %>/edit">Edit</a>
-            <form class="show_btns_item" action="/<%= currentUser._id %>/notes/<%= note._id %>?_method=DELETE" method="POST">
-                <button class="btn btn-danger">Delete</button>
+            <form action="/<%= currentUser._id %>/notes/<%= note._id %>?_method=DELETE" method="POST">
+                <button class="btn btn-danger show_btns_item">Delete</button>
             </form>
         </div>
+        <span class="date"><%= note.created.toDateString() %></span>
     </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <%- include("../partials/footer") %>
