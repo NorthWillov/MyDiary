@@ -75,7 +75,7 @@ textarea {
 }
 .show_p {
     color: #000;
-    padding: 10px 10px 40px 10px;
+    padding: 10px 10px 30px 10px;
     background-color: rgba(255,255,255,1);
     border: 1px solid #000;
 }
@@ -104,13 +104,13 @@ textarea {
 }
 .date {
     text-align: center;
+    margin-top: 10px;
 }
 .show_h1 {
     text-align: center;
+    margin-bottom: 15px;
 }
-
-
-
-
-
-
+.show_content {
+    width: 75%;
+    margin: 0 auto;
+}

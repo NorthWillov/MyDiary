@@ -2,16 +2,18 @@
 
 <div class="container">
     <div class="row">
-        <h1 class="show_h1"><%= note.title %></h1>
-        <p class="show_p"><%= note.content %></p>
-        <span class="date"><%= note.created.toDateString() %></span>
-        <div class="show_btns">
-            <a class="show_btns_item btn btn-warning" href="/<%= currentUser._id %>/notes/<%= note._id %>/edit">Edit</a>
-            <form action="/<%= currentUser._id %>/notes/<%= note._id %>?_method=DELETE" method="POST">
-                <button class="btn btn-danger show_btns_item">Delete</button>
-            </form>
+        <div class="show_content">
+            <h1 class="show_h1"><%= note.title %></h1>
+            <p class="show_p"><%= note.content %></p>
+            <span class="date"><%= note.created.toDateString() %></span>
+            <div class="show_btns">
+                <a class="show_btns_item btn btn-warning" href="/<%= currentUser._id %>/notes/<%= note._id %>/edit">Edit</a>
+                <form action="/<%= currentUser._id %>/notes/<%= note._id %>?_method=DELETE" method="POST">
+                    <button class="btn btn-danger show_btns_item">Delete</button>
+                </form>
+            </div>
+            <a class="goback" href="/<%= currentUser._id %>/notes">Go back</a>
         </div>
-        <a class="goback" href="/<%= currentUser._id %>/notes">Go back</a>
     </div>
 </div>
 
