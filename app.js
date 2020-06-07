@@ -13,8 +13,8 @@ let noteRoutes      = require("./routes/notes"),
     userRoutes      = require("./routes/user"),
     indexRoutes     = require("./routes/index");
 
-mongoose.connect("mongodb://localhost/MyDiary");
-// mongoose.connect("mongodb+srv://northwillov:Ya150699@cluster0-daqdu.mongodb.net/test?retryWrites=true&w=majority", {useNewUrlParser: true, useUnifiedTopology: true});
+// mongoose.connect("mongodb://localhost/MyDiary");
+mongoose.connect("mongodb+srv://northwillov:Ya150699@cluster0-daqdu.mongodb.net/test?retryWrites=true&w=majority", {useNewUrlParser: true, useUnifiedTopology: true});
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
@@ -48,8 +48,6 @@ app.use("/:user_id", userRoutes);
 app.use("/:user_id/notes", noteRoutes);
 
 
-app.listen(3000, function(){
+app.listen(process.env.PORT, process.env.IP, function(){
     console.log("Starting Server...");
 });
-
-// process.env.PORT, process.env.IP
