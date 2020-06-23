@@ -1,4 +1,4 @@
-let express             = require("express"),
+const express             = require("express"),
     expressSanitizer 	= require("express-sanitizer"),
     app                 = express(),
     bodyParser          = require("body-parser"),
@@ -9,11 +9,11 @@ let express             = require("express"),
     methodOverride      = require("method-override"),
     User                = require("./models/user");
 
-let noteRoutes      = require("./routes/notes"),
+const noteRoutes      = require("./routes/notes"),
     userRoutes      = require("./routes/user"),
     indexRoutes     = require("./routes/index");
 
-// mongoose.connect("mongodb://localhost/MyDiary");
+// mongoose.connect("mongodb://localhost/MyDiary", { useUnifiedTopology: true, useNewUrlParser: true});
 mongoose.connect("mongodb+srv://northwillov:Ya150699@cluster0-daqdu.mongodb.net/test?retryWrites=true&w=majority", {useNewUrlParser: true, useUnifiedTopology: true});
 
 app.use(bodyParser.urlencoded({extended: true}));
@@ -51,3 +51,4 @@ app.use("/:user_id/notes", noteRoutes);
 app.listen(process.env.PORT, process.env.IP, function(){
     console.log("Starting Server...");
 });
+

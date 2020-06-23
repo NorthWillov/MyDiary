@@ -1,4 +1,4 @@
-let express 	= require("express"),
+const express 	= require("express"),
     router 		= express.Router(),
     User        = require("../models/user"),
     middleware  = require("../middleware");

@@ -1,4 +1,4 @@
-let express     = require("express"),
+const express     = require("express"),
     router      = express.Router(),
     passport    = require("passport"),
     User        = require("../models/user");
@@ -44,28 +44,25 @@ router.get("/login", (req, res) => {
 });
 
 // HANDLE LOGIN FORM
-router.post("/login", passport.authenticate("local", 
-    {
-        successRedirect: "/",
-        failureRedirect: "/login",
+// router.post("/login", passport.authenticate("local", 
+//     {
+//         successRedirect: "/",
+//         failureRedirect: "/login",
+//         failureFlash: true,
+//         successFlash: 'Welcome to MyDiary!'
+//     }), function(req, res){
+
+// });
+router.post('/login', 
+    passport.authenticate('local', 
+    { 
+        failureRedirect: '/login',
         failureFlash: true,
         successFlash: 'Welcome to MyDiary!'
-    }), function(req, res){
-});
-
-// router.post("/login", (req, res) => {
-//     User.findById(req.user, (err, user) => {
-//         if (err) {
-//             req.flash("error", err.message);
-//             return res.redirect("/login");
-//         } else {
-//             passport.authenticate("local")(req, res, function(){
-//                 req.flash("success", "Logged in as " + req.user.username);
-//                 res.redirect("/" + req.user._id + "/notes");
-//             });
-//         }
-//     })
-// });
+    }),
+    function(req, res) {
+        res.redirect(`/${req.user._id}/notes`);
+  });
 
     
 // LOGOUT ROUTE

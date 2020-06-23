@@ -6,12 +6,11 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 .navbar-default .navbar-brand {
-    font-family: 'Lacquer', sans-serif;
-    color: #b33;
+    color: #fff;
     font-size: 30px;
 }
 .navbar-default .navbar-brand:hover {
-    color: red;
+    color: #fff;
 }
 .navbar-default {
     padding: 20px;
@@ -94,14 +93,6 @@ textarea {
     float: right;
     color: #fff;
 }
-.author {
-    font-size: 10px;
-    color:black; 
-    position: absolute; 
-    display: block; 
-    bottom: 0%; 
-    right: 45%;
-}
 .date {
     text-align: center;
     margin-top: 10px;
@@ -113,4 +104,7 @@ textarea {
 .show_content {
     width: 75%;
     margin: 0 auto;
+}
+.user-info p {
+    font-size: 25px;
 }
