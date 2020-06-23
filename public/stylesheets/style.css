@@ -45,6 +45,19 @@ body {
 .thumbnail {
     background-color: rgba(255,255,255,0.1);
     height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.thumbnail-content {
+    margin: 15px 0;
+}
+.thumbnail-content h1 {
+    overflow-wrap: anywhere;
+    margin: 0;
+}
+.thumbnail-content p {
+    overflow-wrap: anywhere;
 }
 span {
     display: block;

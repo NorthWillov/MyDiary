@@ -52,3 +52,4 @@ app.listen(process.env.PORT, process.env.IP, function(){
     console.log("Starting Server...");
 });
 
+// process.env.PORT, process.env.IP

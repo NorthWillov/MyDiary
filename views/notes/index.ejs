@@ -11,12 +11,14 @@
     <h2>Your notes:</h2>
     <div class="row text-center" style="display: flex; flex-wrap: wrap;">
         <% notes.forEach((note) => { %>
-            <div class="col-md-3 col-sm-6">
+            <div class="col-lg-3 col-md-4 col-sm-6">
                 <div class="thumbnail">
-                    <h1><%= note.title.substring(0, 12) %></h1>
-                    <p><%= note.content.substring(0, 30) %></p>
-                    <span>Date: <%= note.created.toDateString() %></span>
-                    <a class="readmore btn btn-sm" href="/<%= currentUser._id %>/notes/<%=note._id%>"> Read</a>
+                    <div class="thumbnail-content">
+                        <h1><%= note.title.substring(0, 12) %></h1>
+                        <p><%= note.content.substring(0, 30) %></p>
+                        <span>Date: <%= note.created.toDateString() %></span>
+                        <a class="readmore btn btn-sm" href="/<%= currentUser._id %>/notes/<%=note._id%>"> Read</a>
+                    </div>
                 </div>
             </div> 
         <% }); %>
