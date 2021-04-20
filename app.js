@@ -52,7 +52,7 @@ app.use("/", indexRoutes);
 app.use("/:user_id", userRoutes);
 app.use("/:user_id/notes", noteRoutes);
 
-app.listen(3000, () => {
+app.listen(process.env.PORT, process.env.IP, () => {
   console.log("Starting Server...");
 });
 
