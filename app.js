@@ -16,7 +16,7 @@ const noteRoutes = require("./routes/notes"),
 require("dotenv").config();
 
 mongoose.connect(
-  `mongodb+srv://northwillov:${process.env.MONGO_PASSWORD}@cluster0-daqdu.mongodb.net/test?retryWrites=true&w=majority`,
+  `mongodb+srv://northwillov:Ya150699@cluster0-daqdu.mongodb.net/test?retryWrites=true&w=majority`,
   { useNewUrlParser: true, useUnifiedTopology: true }
 );
 
@@ -52,7 +52,7 @@ app.use("/", indexRoutes);
 app.use("/:user_id", userRoutes);
 app.use("/:user_id/notes", noteRoutes);
 
-app.listen(process.env.PORT, process.env.IP, () => {
+app.listen(3000, () => {
   console.log("Starting Server...");
 });
 
