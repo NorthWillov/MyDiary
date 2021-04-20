@@ -4,6 +4,7 @@
   "description": "Create and Share your Posts",
   "main": "app.js",
   "scripts": {
+    "dev": "export NODE_ENV=development&& node app.js",
     "start": "node app.js"
   },
   "author": "northwillov",
@@ -11,7 +12,6 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "connect-flash": "^0.1.1",
-    "dotenv": "^8.2.0",
     "ejs": "^3.0.1",
     "express": "^4.17.1",
     "express-sanitizer": "^1.0.5",

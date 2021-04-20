@@ -13,8 +13,6 @@ const noteRoutes = require("./routes/notes"),
   userRoutes = require("./routes/user"),
   indexRoutes = require("./routes/index");
 
-require("dotenv").config();
-
 mongoose.connect(
   `mongodb+srv://northwillov:Ya150699@cluster0-daqdu.mongodb.net/test?retryWrites=true&w=majority`,
   { useNewUrlParser: true, useUnifiedTopology: true }
